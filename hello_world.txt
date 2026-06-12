@@ -101,4 +101,5 @@ git push -u origin feature-branch
 git push origin --delete feature-branch
     Delete a remote branch: This completely removes the designated branch from the repository.
 
-
+8. git checkout <branch>
+This command can switch you between branches.
