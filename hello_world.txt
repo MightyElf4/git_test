@@ -91,6 +91,14 @@ git log -p
 git log -- path/to/file.txt 
     track a specific file 
 
+7. git push
+This command uploads your local repository commits to a remote repository, making your changes accessible to collaborators.
 
+git push origin main 
+    Standard push: this pushes your changes from the local branch to the remote branch named 'main' on the default remote host (usually main)
+git push -u origin feature-branch
+    First time pushing a new branch: the "-u" glag links your local branch directly to the remote branch. After doing this, you can just use 'git push' in the future.
+git push origin --delete feature-branch
+    Delete a remote branch: This completely removes the designated branch from the repository.
 
 
