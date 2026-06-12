@@ -1,0 +1,96 @@
+
+I am learning how to use git.
+
+I created a directory named 'repos' to hold my repositories
+
+Here are some commands:
+
+1. git@github.com:MightyElf4/git_test.git
+This command is an example of how to copy a repository from GitHub onto my computer
+using the CLI.
+
+2. git remote 
+This command shows the short names of allconfigured remote repositories.
+
+git remote -v
+    Shows the short names alongside their specific fetch and push URLs.
+git remote add <name> <url>
+    Links a new remote repository to your local setup under a specified alias.
+git remote show <name>
+    Displays detailed information about a specific remote, including tracked branches.
+git remote rename <old> <new>
+    Changes the shorthand alias of an existing remote.
+git remote remove <name>
+    Unlinks a remote repository from your local system.
+git remote set-url <name> <new-url>
+    Updates the web or server address of an existing remote
+
+3. git status
+This command displays the current state of
+your Git working directory and staging area.
+
+git status -s: 
+    Short-format condensed view showing concise status codes like M for modified or A for added.
+git status -b: 
+    Used alongside the short flag (git status -sb) to force branch information into the compact view.
+git status -v: 
+    Verbose mode that displays the actual textual differences (git diff) alongside file status.
+
+4. git add 
+This command moves changes from your local working directory to the staging area (aka index), preparing them to be included in
+your next commit.
+
+git add filename.txt
+    Stages a single file.
+git add . 
+    Stage all changes in the current directory and subdircetories
+git add -A
+    Stage all changes across the entire repository.
+git add file1.js file2.css
+    Stage multiple specific files
+git add *.txt
+    Stage all files matching a specific extension
+
+Useful options:
+    -p / --patchInteractive staging: 
+        Prompts you to review and stage specific parts (hunks) of a file instead of the whole file.
+    -u / --update:
+        Stages modified and deleted files only, completely ignoring new (untracked) files.
+    -n / --dry-run: 
+        Shows you what would be staged without actually staging the files (great for testing).
+
+5. git commit
+This command captures a snapshot of your project's currently staged changes and permanently saves them to your local repository history.
+
+git commit -m "your message"
+    Commits your staged changes directly from the command line with a brief descriptive message.
+git commit -am "your message"
+    Automatically stages all modified or deleted files and commits them in one step. Note: This will not include newly created (untracked) files.
+git commit --amend -m "new message"
+    Modifies your very last commit. Use this to fix a typo in your last message or add forgotten changes to it.
+
+6. git log
+This command is used to view the commit history of a Git repository.
+
+git log --oneline
+    compact summary
+git log -n <number (ex.5)>
+    limit commit count
+git log --oneline --graph --all
+    visual branch graph
+git log --author="name"
+    filter by author
+git log --since="2 weeks ago"
+    filter by date
+git log --grep="bug fix"
+    sort commit message
+git log --stat
+    view changed files
+git log -p 
+    show code changes
+git log -- path/to/file.txt 
+    track a specific file 
+
+
+
+
